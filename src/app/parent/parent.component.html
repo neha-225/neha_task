@@ -1,0 +1,47 @@
+
+<input id="searching" class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching by name">
+
+
+<button id="addTask" class="form-control" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+Add new task
+</button>
+
+<div class="container-fluid maindiv">
+<div class="row" style="margin: 30px;">
+<app-step1 #step1  [searchText]="searchText" (newItemEvent)="addItem($event)" ></app-step1>
+<app-step2 #step2 [searchText]="searchText" (newItemEvent)="addItem($event)" ></app-step2>
+<app-step3 #step3  [searchText]="searchText" (newItemEvent)="addItem($event)"></app-step3>
+<app-step4 #step4 [searchText]="searchText"></app-step4>
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Number 
+        <div>
+
+      <input id="removeValueNumber" class="form-control" type="number" name="number" [(ngModel)]="number" autocomplete="off">
+        </div>
+        <div>
+        Text For search 
+      <input id="removeValue" class="form-control" type="text" name="add" [(ngModel)]="name" autocomplete="off">
+</div>
+    
+ 
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="addTask()" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

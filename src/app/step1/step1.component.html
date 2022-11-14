@@ -1,0 +1,22 @@
+ 
+    <div class="col-md-3 rowdiv" >
+    
+    <div><label style="padding: 15px 0 0 0;">STEP 1</label></div>
+
+
+
+    <div class="col-sm-12 div2" *ngFor="let item of heroes; index as index;">
+    <label style="text-align:center;">{{item.number}}</label>
+    <br>
+    <label style="position: absolute;">{{item.name}}</label>
+        <label style="position: absolute; right: 10px; color: red;" (click)="Delete(index)" >Delete</label>
+        <!-- <label style="position: absolute; bottom: 0px;">1</label> -->
+        <label style="position: absolute; right: 10px; bottom: 0px;" (click)="Shift(item)">Right</label>
+    </div>
+
+
+
+   
+</div>
+
+
