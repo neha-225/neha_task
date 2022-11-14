@@ -34,8 +34,10 @@ export class ParentComponent implements OnInit {
         this.step2Shift = 1;
 
         this.step2.heroes.push(newItem)
+
         this.step2.heroes.sort(function (a, b) {
           return a.number - b.number
+          
         })
 
 
@@ -116,6 +118,12 @@ export class ParentComponent implements OnInit {
             return object.number !== newItem.number;
           });
         }
+        
+
+        // this.step1.heroess = this.step1.heroes;
+        // this.step2.heroess = this.step2.heroes;
+        // this.step3.heroess = this.step3.heroes;
+        // this.step4.heroess = this.step4.heroes;
     
 
     // console.log(newArr);
@@ -161,6 +169,8 @@ export class ParentComponent implements OnInit {
     console.log(index);
     if (index != -1) {
       this.step1.heroes.push({ id: 100, name: this.name, number:this.number})
+              this.step1.heroess = this.step1.heroes;
+
       this.step1.heroes.sort(function (a, b) {
         return a.number - b.number
       })
@@ -179,6 +189,8 @@ export class ParentComponent implements OnInit {
     console.log(index1);
     if (index1 != -1) {
       this.step2.heroes.push({ id: 100, name: this.name, number:this.number})
+      this.step2.heroess = this.step2.heroes;
+
       this.step2.heroes.sort(function (a, b) {
         return a.number - b.number
       })
@@ -197,6 +209,8 @@ export class ParentComponent implements OnInit {
     console.log(index3);
     if (index3 != -1) {
       this.step3.heroes.push({ id: 100, name: this.name, number:this.number})
+      this.step3.heroess = this.step3.heroes;
+
       this.step3.heroes.sort(function (a, b) {
         return a.number - b.number
       })
@@ -216,6 +230,8 @@ export class ParentComponent implements OnInit {
     console.log(index4);
     if (index4 != -1) {
       this.step4.heroes.push({ id: 100, name: this.name, number:this.number})
+      this.step4.heroess = this.step4.heroes;
+
       this.step4.heroes.sort(function (a, b) {
         return a.number - b.number
       })
